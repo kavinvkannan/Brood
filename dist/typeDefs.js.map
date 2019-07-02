@@ -1,0 +1,1 @@
+{"version":3,"file":"typeDefs.js","sourceRoot":"","sources":["../src/typeDefs.ts"],"names":[],"mappings":";;AAAA,iEAA+D;AAC/D,iEAA4C;AAE5C,MAAM,KAAK,GAAG,kCAAU,CAAC,GAAG,SAAS,eAAe,EAAE;IACpD,SAAS,EAAE,IAAI;CAChB,CAAC,CAAC;AAEU,QAAA,QAAQ,GAAG,2BAAG,CAAC,kCAAU,CAAC,KAAK,EAAE,EAAE,GAAG,EAAE,IAAI,EAAE,CAAC,CAAC,CAAC"}

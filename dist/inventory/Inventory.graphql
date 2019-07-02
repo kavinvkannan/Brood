@@ -1,0 +1,27 @@
+type Query {
+  inventory: [Inventory] 
+}
+
+type Mutation{
+   checkout(scannedItems: [InventoryInput!]!): Float!
+}
+
+##########################################
+################ INPUTS ##################
+##########################################
+
+ input InventoryInput {
+   sku: String
+   quantity: Int
+ }
+
+##########################################
+################ TYPES ###################
+##########################################
+
+type Inventory {
+  sku: String
+  name: String
+  price: Float
+  inventoryQty: Int
+}

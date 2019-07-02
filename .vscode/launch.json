@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/dist/index.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        },
+        {
+			"name": "Start extension",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceRoot}"
+			],
+			"stopOnEntry": false
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "jest",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "--colors",
+                "--verbose"
+            ]
+        }
+    ]
+}

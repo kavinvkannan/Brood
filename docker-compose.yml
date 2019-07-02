@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  brood:
+    image: brood
+    build: .
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules  
+    ports:
+      - 3000:3000
+    command: npm start

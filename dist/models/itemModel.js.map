@@ -1,0 +1,1 @@
+{"version":3,"file":"itemModel.js","sourceRoot":"","sources":["../../src/models/itemModel.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,GAAG;IACb,KAAK,EAAG;QACJ;YACI,KAAK,EAAE,yCAAyC;YAChD,MAAM,EAAE,cAAc;SACzB;QACD;YACI,KAAK,EAAE,eAAe;YACtB,MAAM,EAAE,kBAAkB;SAC7B;KACJ;CAAC,CAAC"}
