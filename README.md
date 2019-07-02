@@ -60,7 +60,7 @@ jest run test
 ```
  A successful test run should look something like this,
 
-[JEST Output](https://github.com/Candore/Brood/blob/master/images/jest_output.png)
+![JEST Output](https://github.com/Candore/Brood/blob/master/images/jest_output.png)
 # Docker
 
 If you choose to build and use a docker image, make sure you have the Docker app running and from the rood directory of the project enter the command
