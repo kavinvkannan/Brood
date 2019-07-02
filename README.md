@@ -61,6 +61,16 @@ jest run test
  A successful test run should look something like this,
 
 ![JEST Output](https://github.com/Candore/Brood/blob/master/images/jest_output.png)
+
+# Postman Collection
+ 
+ For your convenience I have added a [Postman Collection](https://github.com/Candore/Brood/blob/master/postman/Brood.postman_collection.json) here.
+
+After downloading this file, import it into your postman application.
+In order to mke graphQL queries, you will need the latest version of the postman, i.e Version 7.2.2 (7.2.2) and above should support this 
+collection file.
+
+
 # Docker
 
 If you choose to build and use a docker image, make sure you have the Docker app running and from the rood directory of the project enter the command
