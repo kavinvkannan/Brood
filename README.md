@@ -66,8 +66,9 @@ jest run test
  
  For your convenience I have added a [Postman Collection](https://github.com/Candore/Brood/blob/master/postman/Brood.postman_collection.json) here.
 
-After downloading this file, import it into your postman application.
-In order to mke graphQL queries, you will need the latest version of the postman, i.e Version 7.2.2 (7.2.2) and above should support this 
+Please down load this file as a .json to your desktop or to a desired directory.
+
+In order to make graphQL queries, you will need the latest version of the postman, i.e Version 7.2.2 (7.2.2) and above should support this 
 collection file.
 
 
