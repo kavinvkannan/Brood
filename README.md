@@ -2,7 +2,7 @@
 Brood api is a simple graphql server that serves querying and manipulation of few inventory items.
 Learn more about [Graphiql here](https://github.com/graphql/graphiql).
 
-In order to interact with this api, I will provide a Postman Collection that has sample graphQL requests.
+In order to interact with this api a Postman Collection is added to this project that contains sample graphQL requests.
 
 But if you are familiar with graphQL, then you may access the api through this link http://localhost:3000/graphql once the api is running locally
 or from the Docker image.
