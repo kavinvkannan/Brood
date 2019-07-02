@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "617490a1-2370-493f-a57d-114231ad7951",
+		"name": "Brood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Each sale of a MacBook Pro comes with a free Raspberry Pi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($scannedItems: [InventoryInput!]!) {\n    checkout(scannedItems:$scannedItems)\n}",
+						"variables": "{\n  \"scannedItems\": [\n    {\n      \"sku\": \"43N23P\",\n      \"quantity\": 2\n    },\n    {\n      \"sku\": \"234234\",\n      \"quantity\": 2\n    }\n  ]\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get only the name and quantity of the inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  inventory{\n    name\n    inventoryQty\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buying more than 3 Alexa Speakers will have a 10% discount on all Alexa speakers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($scannedItems: [InventoryInput!]!) {\n    checkout(scannedItems:$scannedItems)\n}\n",
+						"variables": "{\n  \"scannedItems\": [\n    {\n      \"sku\": \"A304SD\",\n      \"quantity\": 4\n    }\n  ]\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buying more than 3 Alexa Speakers will have a 10% discount on all Alexa speakers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation($scannedItems: [InventoryInput]) {\n    checkout(scannedItems:$scannedItems)\n}",
+								"variables": "{\n  \"scannedItems\": [\n    {\n      \"sku\": \"A304SD\",\n      \"quantity\": 4\n    }\n  ]\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2019 19:20:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"checkout\": 394.2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Buy 3 Google Homes for the price of 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($scannedItems: [InventoryInput!]!) {\n    checkout(scannedItems:$scannedItems)\n}",
+						"variables": "{\n  \"scannedItems\": [\n    {\n      \"sku\": \"120P90\",\n      \"quantity\": 3\n    }\n  ]\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  inventory{\n    sku\n    name\n    price\n    inventoryQty\n  }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cumulative Deals and Discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($scannedItems: [InventoryInput!]!) {\n    checkout(scannedItems:$scannedItems)\n}",
+						"variables": "{\n  \"scannedItems\": [\n    {\n      \"sku\": \"A304SD\",\n      \"quantity\": 4\n    },\n    {\n      \"sku\": \"43N23P\",\n      \"quantity\": 3\n    },\n    {\n      \"sku\": \"234234\",\n      \"quantity\": 2\n    },\n    {\n      \"sku\": \"120P90\",\n      \"quantity\": 10\n    }\n  ]\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
