@@ -85,3 +85,7 @@ Once finished you should see this message in the console.
 ```
 Server running at http://localhost:3000/graphql
 ```
+
+# Build Issue ?
+
+If you may encounter a build issue related to graphql type, you should be able to fix it by copying the src/inventory/inventory.graphql file into dist/inventory folder and rebuilding the project.
