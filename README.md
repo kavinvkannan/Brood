@@ -74,7 +74,7 @@ collection file.
 
 # Docker
 
-If you choose to build and use a docker image, make sure you have the Docker app running and from the rood directory of the project enter the command
+If you may choose to build and use a docker image, after starting the Docker app, from the root directory of the project enter the command
 ```
 docker-compose up
 ```
@@ -88,4 +88,4 @@ Server running at http://localhost:3000/graphql
 
 # Build Issue ?
 
-If you may encounter a build issue related to graphql type, you should be able to fix it by copying the src/inventory/inventory.graphql file into dist/inventory folder and rebuilding the project.
+If you may encounter a build issue related to graphql type, it can be fixed by copying the src/inventory/inventory.graphql file into dist/inventory folder and rebuilding the project.
