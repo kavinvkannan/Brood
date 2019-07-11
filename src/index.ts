@@ -1,14 +1,23 @@
 import express from "express";
 import dotenv from "dotenv";
+import admin from "firebase-admin";
+import functions from "firebase-functions";
 import { ApolloServer, gql } from "apollo-server-express";
 import { resolvers } from "./resolvers";
 import { typeDefs } from "./typeDefs";
+// import firebase from "firebase";
 
 dotenv.config(); // Intializes configuration to manage environment variable
 
 const port = process.env.SERVER_PORT;
 const app = express();
-
+admin.initializeApp();
+// const firebaseConfig = {
+//   databaseURL: "https://brood-api.firebaseio.com/",
+//   serviceAccount: "./brood-api.json" 
+// };
+//  firebase.initializeApp(firebaseConfig);
+// const database = firebase.database();
 /**
  * I have considered using graphQL approach over
  * a traditional REST approach for this challenge.
@@ -33,8 +42,8 @@ const app = express();
  * One such example call is provided in the Postman collection - 'Get only the name and quantity of the inventory'
  **/
 const graphQLServer = new ApolloServer({ typeDefs, resolvers });
-
-graphQLServer.applyMiddleware({ app });
+exports.graphql = functions.https.onRequest(app);
+graphQLServer.applyMiddleware({ app, path: "/", cors: true });
 
 app.listen(port, () => {
   //tslint:disable-next-line:no-console
